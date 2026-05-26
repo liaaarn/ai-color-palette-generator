@@ -24,9 +24,7 @@ export default function Home() {
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  // =========================
   // HANDLE IMAGE
-  // =========================
   const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 
@@ -47,9 +45,7 @@ export default function Home() {
     reader.readAsDataURL(file);
   };
 
-  // =========================
   // PROCESS IMAGE
-  // =========================
   const processImage = (src: string) => {
     setLoading(true);
 
@@ -105,9 +101,7 @@ export default function Home() {
     };
   };
 
-  // =========================
   // RGB TO HEX
-  // =========================
   function rgbToHex(r: number, g: number, b: number) {
     return (
       "#" +
@@ -121,9 +115,7 @@ export default function Home() {
     );
   }
 
-  // =========================
   // ANALISIS DINAMIS
-  // =========================
   function generateVisualizationExplanation() {
     if (datasetState.length === 0) return "";
 
